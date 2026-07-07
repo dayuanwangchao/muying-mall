@@ -1,6 +1,6 @@
 # 母婴商城管理系统
 
-一个基于 Spring Boot、MyBatis-Plus、MySQL 和 Vue2 的母婴商城全栈项目，包含用户购物流程和后台管理端。项目适合作为 Java Web / Spring Boot 方向的作品展示，重点体现后端接口开发、数据库表设计、后台管理功能和前后端联调能力。
+一个基于 Spring Boot、MyBatis-Plus、MySQL 和 Vue2 的母婴商城全栈项目，包含前台商城展示、用户购物流程和后台管理端。项目适合作为 Java Web / Spring Boot 方向的作品展示，重点体现后端接口开发、数据库表设计、后台管理功能和前后端联调能力。
 
 ## 项目亮点
 
@@ -17,6 +17,7 @@
 | --- | --- |
 | 后端 | Spring Boot 2.2.2, MyBatis-Plus, MySQL, Shiro |
 | 后台前端 | Vue2, Vue Router, Element UI, Axios |
+| 前台页面 | HTML, CSS, JavaScript, LayUI |
 | 构建工具 | Maven, npm |
 | 数据库 | MySQL |
 
@@ -25,7 +26,8 @@
 ```text
 .
 ├── backend/          # Spring Boot 后端服务
-├── admin-frontend/   # Vue 后台管理端核心源码
+├── admin-frontend/   # Vue 后台管理端
+├── front-pages/      # 前台商城静态页面
 ├── database/         # 数据库初始化脚本
 └── docs/             # 项目说明材料
 ```
@@ -47,19 +49,21 @@
 
 ### 2. 初始化数据库
 
-创建数据库：
+1. 创建数据库：
 
 ```sql
 CREATE DATABASE muyingshangcheng DEFAULT CHARACTER SET utf8mb4;
 ```
 
-导入脚本：
+2. 导入脚本：
 
 ```text
 database/schema.sql
 ```
 
 ### 3. 启动后端
+
+进入后端目录：
 
 ```bash
 cd backend
@@ -72,6 +76,16 @@ mvn spring-boot:run
 http://localhost:8080/muyingshangcheng
 ```
 
+数据库连接可通过环境变量覆盖：
+
+```text
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=muyingshangcheng
+DB_USERNAME=root
+DB_PASSWORD=123456
+```
+
 ### 4. 启动后台管理端
 
 ```bash
@@ -79,6 +93,16 @@ cd admin-frontend
 npm install
 npm run serve
 ```
+
+### 5. 访问前台页面
+
+前台页面位于：
+
+```text
+front-pages/index.html
+```
+
+也可以将前台静态资源部署到 Web 服务器后访问。
 
 ## 演示账号
 
@@ -89,9 +113,9 @@ npm run serve
 
 演示数据仅用于本地运行和功能展示。
 
-## 项目说明
+## 可展示给 HR 的说明
 
-这个项目体现了 Java Web 全栈项目的基本开发流程：从数据库建表、后端接口、权限拦截、业务模块 CRUD，到前端管理页面联调。当前仓库为适配 GitHub 网页上传限制的展示版，保留了核心源码、数据库脚本和项目说明。
+这个项目体现了我对 Java Web 全栈项目的基本掌握：能够完成从数据库建表、后端接口、权限拦截、业务模块 CRUD，到前端管理页面联调的完整开发流程。项目虽然是学习/实训背景，但代码结构完整，具备可运行、可演示、可扩展的基础。
 
 ## License
 

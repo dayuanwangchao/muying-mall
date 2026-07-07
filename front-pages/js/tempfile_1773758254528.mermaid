@@ -1,0 +1,30 @@
+graph TB
+    Back[<b>后台管理端</b>]
+    
+    Back --> B5[订单管理]
+    B5 --> B51[订单列表]
+    B5 --> B52[订单审核]
+    B5 --> B53[订单发货]
+    B5 --> B54[退款处理]
+    B5 --> B55[订单统计]
+    
+    Back --> B6[评价评论管理]
+    B6 --> B61[评价审核]
+    B6 --> B62[评价回复]
+    B6 --> B63[评论审核]
+    B6 --> B64[评论删除]
+    
+    Back --> B7[客服资讯]
+    B7 --> B71[在线回复]
+    B7 --> B72[聊天记录]
+    B7 --> B73[资讯发布]
+    B7 --> B74[资讯编辑]
+    
+    Back --> B8[系统配置]
+    B8 --> B81[轮播图设置]
+    B8 --> B82[参数配置]
+    
+    style Back fill:#c9f,stroke:#333,stroke-width:3px
+    style B5 fill:#fff,stroke:#c9f,stroke-width:2px
+    style B6 fill:#fff,stroke:#c9f,stroke-width:2px
+    style B7
